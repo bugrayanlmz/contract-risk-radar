@@ -1,0 +1,45 @@
+{
+  "balanced-lease": {
+    "title": "Cedar Lane Residential Lease",
+    "paragraphs": [
+      "This synthetic residential rental agreement is between fictional landlord Avery Reed and fictional tenant Morgan Vale for 12 Cedar Lane, Example Town.",
+      "The lease starts on January 1, 2027 and ends on December 31, 2027. Monthly rent is USD 1500.00. The security deposit is USD 1500.00.",
+      "The lease does not renew automatically. Any extension requires a new agreement signed by both parties.",
+      "The tenant may terminate early by paying a fee equal to one month's rent. Remaining rent for the unused term is not due.",
+      "The security deposit is refundable. It will be returned within 14 calendar days after actual move-out, less documented damage beyond ordinary wear. Deductions are limited to those documented costs.",
+      "A one-time late fee of 3 percent of monthly rent applies after a grace period of 5 calendar days. Late fees do not accrue daily.",
+      "Rent increases are not permitted during this lease term.",
+      "The landlord may terminate only for a stated breach and must give 30 calendar days of notice. Termination without cause is not permitted.",
+      "Tenant liability is limited to damage caused by the tenant. It excludes landlord negligence, structural repairs, and ordinary wear.",
+      "All persons, addresses, amounts, and terms in this document are fictional. This document is provided only for software demonstration."
+    ]
+  },
+  "renewal-trap": {
+    "title": "Willow Court Residential Lease",
+    "paragraphs": [
+      "This synthetic residential rental agreement is between fictional landlord Rowan Lake and fictional tenant Casey Fern for 9 Willow Court, Example Town.",
+      "The lease starts on April 1, 2027 and ends on March 31, 2028. Monthly rent is USD 1800.00. The security deposit is USD 4500.00.",
+      "This lease automatically renews for a further twelve months unless the tenant gives written notice at least 75 calendar days before the contract end date.",
+      "Early termination is prohibited. If the tenant leaves before the term ends, all remaining rent for the full lease term is immediately due.",
+      "The security deposit is nonrefundable. The landlord may also deduct any amount at the landlord's unrestricted discretion.",
+      "Late payment attracts a daily fee of 2 percent of monthly rent. The grace period is zero calendar days, and the fee accrues daily until payment.",
+      "Rent increases are allowed every 6 months with no cap on the increase. The first increase takes effect on October 1, 2027.",
+      "The landlord may terminate without cause on 5 calendar days of notice.",
+      "Tenant liability is unlimited and includes the landlord's negligence, all structural repairs, and ordinary wear.",
+      "All persons, addresses, amounts, and terms are fictional. These intentionally unfavorable terms illustrate a software demo, not a legal assessment."
+    ]
+  },
+  "missing-details": {
+    "title": "Meadow House Draft Rental Agreement",
+    "paragraphs": [
+      "This synthetic residential rental agreement is a draft between fictional landlord Jamie Pine and fictional tenant Taylor Brook for 7 Meadow House, Example Town.",
+      "The start date, end date, monthly rent, and deposit amount have not yet been agreed. Those fields are intentionally omitted.",
+      "The lease renews automatically, but the renewal duration and notice period have not been specified.",
+      "The tenant may terminate early. The fee, if any, has not been agreed.",
+      "The deposit is refundable. The return period and permitted deductions have not been specified.",
+      "A late payment fee may be charged, but its amount and accrual method are not stated.",
+      "The landlord may terminate without cause. No notice period has been agreed.",
+      "All persons and addresses are fictional. Missing details are intentional and must not be inferred."
+    ]
+  }
+}

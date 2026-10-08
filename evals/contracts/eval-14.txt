@@ -1,0 +1,7 @@
+Dies ist ein frei erfundener Wohnraummietvertrag. Die Laufzeit beginnt am 01.02.2027 und endet am 31.01.2028. Die monatliche Miete beträgt 1.500,00 EUR. Die Kaution beträgt 3.000,00 EUR.
+
+Eine vorzeitige Kündigung ist erlaubt, kostet jedoch das Dreifache der monatlichen Miete.
+
+Bei verspäteter Zahlung fällt nach fünf Kalendertagen eine einmalige Gebühr von 5 Prozent der Monatsmiete an.
+
+Zusätzlich zur Miete muss der Mieter jede vom Vermieter festgesetzte Verwaltungsgebühr ohne Obergrenze bezahlen.

@@ -1,0 +1,2976 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Contract Risk Radar",
+    "description": "English and German residential rental contract demo. Not legal advice.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/capabilities": {
+      "get": {
+        "summary": "Capabilities",
+        "operationId": "getCapabilities",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CapabilitiesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/register": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Register",
+        "operationId": "register",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Credentials"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login",
+        "operationId": "login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Credentials"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Logout",
+        "operationId": "logout",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/me": {
+      "get": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Me",
+        "operationId": "getMe",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "List Documents",
+        "operationId": "listDocuments",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/DocumentResponse"
+                  },
+                  "type": "array",
+                  "title": "Response Listdocuments"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Upload Document",
+        "operationId": "uploadDocument",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_uploadDocument"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocumentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/{document_id}": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Get Document",
+        "operationId": "getDocument",
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocumentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/documents/{document_id}/results": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Results",
+        "operationId": "getResults",
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalysisResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/documents/{document_id}/file": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Download",
+        "operationId": "downloadDocument",
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/pdf": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/documents/{document_id}/retry": {
+      "post": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Retry",
+        "operationId": "retryDocument",
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocumentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/samples": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Samples",
+        "operationId": "listSamples",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/SampleResponse"
+                  },
+                  "type": "array",
+                  "title": "Response Listsamples"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/samples/{sample_id}/file": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Sample File",
+        "operationId": "downloadSample",
+        "parameters": [
+          {
+            "name": "sample_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Sample Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/pdf": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AiFindingResult": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Title"
+          },
+          "related_category": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Category"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "quote": {
+            "type": "string",
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Quote"
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 1,
+            "title": "Explanation"
+          },
+          "model_score": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 1.0,
+            "title": "Model Score"
+          },
+          "rationale": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Rationale"
+          },
+          "uncertainties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 5,
+            "title": "Uncertainties"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "quote_verified": {
+            "type": "boolean",
+            "title": "Quote Verified"
+          },
+          "score": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 5.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "title",
+          "related_category",
+          "quote",
+          "explanation",
+          "model_score",
+          "rationale",
+          "uncertainties",
+          "id",
+          "quote_verified",
+          "score",
+          "warnings"
+        ],
+        "title": "AiFindingResult"
+      },
+      "AnalysisResponse": {
+        "properties": {
+          "document_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Document Id"
+          },
+          "facts": {
+            "$ref": "#/components/schemas/ContractFacts"
+          },
+          "field_evidence": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/FieldEvidenceResult"
+            },
+            "type": "object",
+            "title": "Field Evidence"
+          },
+          "overall_score": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 5.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overall Score"
+          },
+          "ai_overall_score": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 5.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ai Overall Score"
+          },
+          "ai_review_status": {
+            "type": "string",
+            "enum": [
+              "not_run",
+              "completed"
+            ],
+            "title": "Ai Review Status"
+          },
+          "ai_rubric_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ai Rubric Version"
+          },
+          "ai_findings": {
+            "items": {
+              "$ref": "#/components/schemas/AiFindingResult"
+            },
+            "type": "array",
+            "title": "Ai Findings"
+          },
+          "clauses": {
+            "items": {
+              "$ref": "#/components/schemas/ClauseResult"
+            },
+            "type": "array",
+            "title": "Clauses"
+          },
+          "important_dates": {
+            "items": {
+              "$ref": "#/components/schemas/ImportantDateResponse"
+            },
+            "type": "array",
+            "title": "Important Dates"
+          },
+          "categories_not_found": {
+            "items": {
+              "$ref": "#/components/schemas/Category"
+            },
+            "type": "array",
+            "title": "Categories Not Found"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "provider": {
+            "type": "string",
+            "title": "Provider"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model"
+          },
+          "prompt_version": {
+            "type": "string",
+            "title": "Prompt Version"
+          },
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version"
+          },
+          "rules_version": {
+            "type": "string",
+            "title": "Rules Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "document_id",
+          "facts",
+          "field_evidence",
+          "overall_score",
+          "ai_overall_score",
+          "ai_review_status",
+          "ai_rubric_version",
+          "ai_findings",
+          "clauses",
+          "important_dates",
+          "categories_not_found",
+          "warnings",
+          "provider",
+          "model",
+          "prompt_version",
+          "schema_version",
+          "rules_version"
+        ],
+        "title": "AnalysisResponse"
+      },
+      "ApiError": {
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ApiErrorDetail"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "title": "ApiError"
+      },
+      "ApiErrorDetail": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ApiErrorDetail"
+      },
+      "AutoRenewalAttributes": {
+        "properties": {
+          "automatic": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Automatic"
+          },
+          "renewal_months": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 1200.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Renewal Months"
+          },
+          "notice_days": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 36500.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notice Days"
+          },
+          "notice_day_basis": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "calendar",
+                  "business",
+                  "unspecified"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notice Day Basis"
+          },
+          "notice_anchor": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "contract_end",
+                  "other"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notice Anchor"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "automatic",
+          "renewal_months",
+          "notice_days",
+          "notice_day_basis",
+          "notice_anchor"
+        ],
+        "title": "AutoRenewalAttributes"
+      },
+      "AutoRenewalClause": {
+        "properties": {
+          "quote": {
+            "type": "string",
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Quote"
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 1,
+            "title": "Explanation"
+          },
+          "category": {
+            "type": "string",
+            "const": "AUTO_RENEWAL",
+            "title": "Category"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/AutoRenewalAttributes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "quote",
+          "explanation",
+          "category",
+          "attributes"
+        ],
+        "title": "AutoRenewalClause"
+      },
+      "Body_uploadDocument": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          },
+          "document_kind": {
+            "type": "string",
+            "enum": [
+              "synthetic",
+              "real"
+            ],
+            "title": "Document Kind"
+          },
+          "analysis_consent_confirmed": {
+            "type": "boolean",
+            "title": "Analysis Consent Confirmed"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file",
+          "document_kind",
+          "analysis_consent_confirmed"
+        ],
+        "title": "Body_uploadDocument"
+      },
+      "CapabilitiesResponse": {
+        "properties": {
+          "supported_languages": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "english",
+                "german"
+              ]
+            },
+            "type": "array",
+            "title": "Supported Languages"
+          },
+          "real_documents_allowed": {
+            "type": "boolean",
+            "title": "Real Documents Allowed"
+          }
+        },
+        "type": "object",
+        "required": [
+          "supported_languages",
+          "real_documents_allowed"
+        ],
+        "title": "CapabilitiesResponse"
+      },
+      "Category": {
+        "type": "string",
+        "enum": [
+          "AUTO_RENEWAL",
+          "EARLY_TERMINATION",
+          "SECURITY_DEPOSIT",
+          "LATE_PAYMENT",
+          "RENT_INCREASE",
+          "LANDLORD_TERMINATION",
+          "TENANT_LIABILITY"
+        ],
+        "title": "Category"
+      },
+      "ClauseResult": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "clause": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AutoRenewalClause"
+              },
+              {
+                "$ref": "#/components/schemas/EarlyTerminationClause"
+              },
+              {
+                "$ref": "#/components/schemas/SecurityDepositClause"
+              },
+              {
+                "$ref": "#/components/schemas/LatePaymentClause"
+              },
+              {
+                "$ref": "#/components/schemas/RentIncreaseClause"
+              },
+              {
+                "$ref": "#/components/schemas/LandlordTerminationClause"
+              },
+              {
+                "$ref": "#/components/schemas/TenantLiabilityClause"
+              }
+            ],
+            "title": "Clause",
+            "discriminator": {
+              "propertyName": "category",
+              "mapping": {
+                "AUTO_RENEWAL": "#/components/schemas/AutoRenewalClause",
+                "EARLY_TERMINATION": "#/components/schemas/EarlyTerminationClause",
+                "LANDLORD_TERMINATION": "#/components/schemas/LandlordTerminationClause",
+                "LATE_PAYMENT": "#/components/schemas/LatePaymentClause",
+                "RENT_INCREASE": "#/components/schemas/RentIncreaseClause",
+                "SECURITY_DEPOSIT": "#/components/schemas/SecurityDepositClause",
+                "TENANT_LIABILITY": "#/components/schemas/TenantLiabilityClause"
+              }
+            }
+          },
+          "quote_verified": {
+            "type": "boolean",
+            "title": "Quote Verified"
+          },
+          "score": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 5.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score"
+          },
+          "partial": {
+            "type": "boolean",
+            "title": "Partial"
+          },
+          "risk_factors": {
+            "items": {
+              "$ref": "#/components/schemas/RiskFactor"
+            },
+            "type": "array",
+            "title": "Risk Factors"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "clause",
+          "quote_verified",
+          "score",
+          "partial",
+          "risk_factors",
+          "warnings"
+        ],
+        "title": "ClauseResult"
+      },
+      "ContractEvidence": {
+        "properties": {
+          "start_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 12000,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start Date"
+          },
+          "end_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 12000,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End Date"
+          },
+          "monthly_rent": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 12000,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Monthly Rent"
+          },
+          "deposit_amount": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 12000,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Deposit Amount"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "start_date",
+          "end_date",
+          "monthly_rent",
+          "deposit_amount"
+        ],
+        "title": "ContractEvidence"
+      },
+      "ContractFacts": {
+        "properties": {
+          "start_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start Date"
+          },
+          "end_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End Date"
+          },
+          "monthly_rent": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "deposit_amount": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidence": {
+            "$ref": "#/components/schemas/ContractEvidence"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 30,
+            "title": "Warnings"
+          },
+          "contract_type": {
+            "type": "string",
+            "enum": [
+              "residential_rental",
+              "other",
+              "unknown"
+            ],
+            "title": "Contract Type"
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "english",
+              "german",
+              "other",
+              "unknown"
+            ],
+            "title": "Language"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "start_date",
+          "end_date",
+          "monthly_rent",
+          "deposit_amount",
+          "evidence",
+          "warnings",
+          "contract_type",
+          "language"
+        ],
+        "title": "ContractFacts"
+      },
+      "Credentials": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "password": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 10,
+            "title": "Password"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "email",
+          "password"
+        ],
+        "title": "Credentials"
+      },
+      "DocumentResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "filename": {
+            "type": "string",
+            "title": "Filename"
+          },
+          "document_kind": {
+            "type": "string",
+            "enum": [
+              "synthetic",
+              "real"
+            ],
+            "title": "Document Kind"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "processing",
+              "completed",
+              "failed"
+            ],
+            "title": "Status"
+          },
+          "stage": {
+            "type": "string",
+            "enum": [
+              "queued",
+              "extracting_text",
+              "extracting_clauses",
+              "verifying",
+              "scoring",
+              "reviewing_additional_risks",
+              "saving",
+              "completed",
+              "failed"
+            ],
+            "title": "Stage"
+          },
+          "error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error Code"
+          },
+          "error_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error Message"
+          },
+          "retryable": {
+            "type": "boolean",
+            "title": "Retryable"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          },
+          "completed_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Completed At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "filename",
+          "document_kind",
+          "status",
+          "stage",
+          "error_code",
+          "error_message",
+          "retryable",
+          "created_at",
+          "updated_at",
+          "completed_at"
+        ],
+        "title": "DocumentResponse"
+      },
+      "EarlyTerminationAttributes": {
+        "properties": {
+          "allowed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Allowed"
+          },
+          "fee_amount": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "fee_rent_months": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*(?:\\d{0,6}|(?=[\\d.]{1,11}0*$)\\d{0,6}\\.\\d{0,4}0*$)"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fee Rent Months"
+          },
+          "remaining_rent_due": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remaining Rent Due"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "allowed",
+          "fee_amount",
+          "fee_rent_months",
+          "remaining_rent_due"
+        ],
+        "title": "EarlyTerminationAttributes"
+      },
+      "EarlyTerminationClause": {
+        "properties": {
+          "quote": {
+            "type": "string",
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Quote"
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 1,
+            "title": "Explanation"
+          },
+          "category": {
+            "type": "string",
+            "const": "EARLY_TERMINATION",
+            "title": "Category"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/EarlyTerminationAttributes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "quote",
+          "explanation",
+          "category",
+          "attributes"
+        ],
+        "title": "EarlyTerminationClause"
+      },
+      "FieldEvidenceResult": {
+        "properties": {
+          "quote": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Quote"
+          },
+          "verified": {
+            "type": "boolean",
+            "title": "Verified"
+          }
+        },
+        "type": "object",
+        "required": [
+          "quote",
+          "verified"
+        ],
+        "title": "FieldEvidenceResult"
+      },
+      "ImportantDateResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "clause_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Clause Id"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "title": "Date"
+          },
+          "basis": {
+            "type": "string",
+            "title": "Basis"
+          },
+          "source_references": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source References"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "clause_id",
+          "kind",
+          "date",
+          "basis",
+          "source_references"
+        ],
+        "title": "ImportantDateResponse"
+      },
+      "LandlordTerminationAttributes": {
+        "properties": {
+          "without_cause": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Without Cause"
+          },
+          "notice_days": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 36500.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notice Days"
+          },
+          "notice_day_basis": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "calendar",
+                  "business",
+                  "unspecified"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notice Day Basis"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "without_cause",
+          "notice_days",
+          "notice_day_basis"
+        ],
+        "title": "LandlordTerminationAttributes"
+      },
+      "LandlordTerminationClause": {
+        "properties": {
+          "quote": {
+            "type": "string",
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Quote"
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 1,
+            "title": "Explanation"
+          },
+          "category": {
+            "type": "string",
+            "const": "LANDLORD_TERMINATION",
+            "title": "Category"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/LandlordTerminationAttributes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "quote",
+          "explanation",
+          "category",
+          "attributes"
+        ],
+        "title": "LandlordTerminationClause"
+      },
+      "LatePaymentAttributes": {
+        "properties": {
+          "fee_amount": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "fee_percent_of_rent": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*(?:\\d{0,6}|(?=[\\d.]{1,11}0*$)\\d{0,6}\\.\\d{0,4}0*$)"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fee Percent Of Rent"
+          },
+          "grace_days": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 36500.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Grace Days"
+          },
+          "grace_day_basis": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "calendar",
+                  "business",
+                  "unspecified"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Grace Day Basis"
+          },
+          "accrues_daily": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Accrues Daily"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "fee_amount",
+          "fee_percent_of_rent",
+          "grace_days",
+          "grace_day_basis",
+          "accrues_daily"
+        ],
+        "title": "LatePaymentAttributes"
+      },
+      "LatePaymentClause": {
+        "properties": {
+          "quote": {
+            "type": "string",
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Quote"
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 1,
+            "title": "Explanation"
+          },
+          "category": {
+            "type": "string",
+            "const": "LATE_PAYMENT",
+            "title": "Category"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/LatePaymentAttributes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "quote",
+          "explanation",
+          "category",
+          "attributes"
+        ],
+        "title": "LatePaymentClause"
+      },
+      "Money": {
+        "properties": {
+          "amount": {
+            "type": "string",
+            "title": "Amount"
+          },
+          "currency": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z]{3}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Currency"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "amount",
+          "currency"
+        ],
+        "title": "Money"
+      },
+      "RentIncreaseAttributes": {
+        "properties": {
+          "allowed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Allowed"
+          },
+          "increase_amount": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "increase_percent": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(?!^[-+.]*$)[+-]?0*(?:\\d{0,6}|(?=[\\d.]{1,11}0*$)\\d{0,6}\\.\\d{0,4}0*$)"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Increase Percent"
+          },
+          "minimum_interval_months": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 1200.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Minimum Interval Months"
+          },
+          "uncapped": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Uncapped"
+          },
+          "effective_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Effective Date"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "allowed",
+          "increase_amount",
+          "increase_percent",
+          "minimum_interval_months",
+          "uncapped",
+          "effective_date"
+        ],
+        "title": "RentIncreaseAttributes"
+      },
+      "RentIncreaseClause": {
+        "properties": {
+          "quote": {
+            "type": "string",
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Quote"
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 1,
+            "title": "Explanation"
+          },
+          "category": {
+            "type": "string",
+            "const": "RENT_INCREASE",
+            "title": "Category"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/RentIncreaseAttributes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "quote",
+          "explanation",
+          "category",
+          "attributes"
+        ],
+        "title": "RentIncreaseClause"
+      },
+      "RiskFactor": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "severity": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 1.0,
+            "title": "Severity"
+          },
+          "explanation": {
+            "type": "string",
+            "title": "Explanation"
+          },
+          "inputs": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Inputs"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "severity",
+          "explanation",
+          "inputs"
+        ],
+        "title": "RiskFactor"
+      },
+      "SampleResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description"
+        ],
+        "title": "SampleResponse"
+      },
+      "SecurityDepositAttributes": {
+        "properties": {
+          "refundable": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Refundable"
+          },
+          "return_days": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 36500.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Return Days"
+          },
+          "return_day_basis": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "calendar",
+                  "business",
+                  "unspecified"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Return Day Basis"
+          },
+          "unrestricted_deductions": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unrestricted Deductions"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "refundable",
+          "return_days",
+          "return_day_basis",
+          "unrestricted_deductions"
+        ],
+        "title": "SecurityDepositAttributes"
+      },
+      "SecurityDepositClause": {
+        "properties": {
+          "quote": {
+            "type": "string",
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Quote"
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 1,
+            "title": "Explanation"
+          },
+          "category": {
+            "type": "string",
+            "const": "SECURITY_DEPOSIT",
+            "title": "Category"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/SecurityDepositAttributes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "quote",
+          "explanation",
+          "category",
+          "attributes"
+        ],
+        "title": "SecurityDepositClause"
+      },
+      "TenantLiabilityAttributes": {
+        "properties": {
+          "unlimited": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unlimited"
+          },
+          "includes_landlord_negligence": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Includes Landlord Negligence"
+          },
+          "includes_structural_repairs": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Includes Structural Repairs"
+          },
+          "excludes_normal_wear": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Excludes Normal Wear"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "unlimited",
+          "includes_landlord_negligence",
+          "includes_structural_repairs",
+          "excludes_normal_wear"
+        ],
+        "title": "TenantLiabilityAttributes"
+      },
+      "TenantLiabilityClause": {
+        "properties": {
+          "quote": {
+            "type": "string",
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Quote"
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 3000,
+            "minLength": 1,
+            "title": "Explanation"
+          },
+          "category": {
+            "type": "string",
+            "const": "TENANT_LIABILITY",
+            "title": "Category"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/TenantLiabilityAttributes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "quote",
+          "explanation",
+          "category",
+          "attributes"
+        ],
+        "title": "TenantLiabilityClause"
+      },
+      "UserResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "email": {
+            "type": "string",
+            "title": "Email"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "email"
+        ],
+        "title": "UserResponse"
+      }
+    }
+  }
+}

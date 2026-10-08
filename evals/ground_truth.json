@@ -1,0 +1,561 @@
+[
+  {
+    "id": "eval-01",
+    "pdf": "contracts/eval-01.pdf",
+    "clauses": [
+      {
+        "category": "AUTO_RENEWAL",
+        "quote": "Renewal is not automatic; a signed written extension is required.",
+        "start": 446,
+        "end": 511
+      },
+      {
+        "category": "EARLY_TERMINATION",
+        "quote": "Early termination is allowed with a fee of half a month's rent; unused future rent is not payable.",
+        "start": 512,
+        "end": 610
+      },
+      {
+        "category": "SECURITY_DEPOSIT",
+        "quote": "The deposit is refundable within 10 calendar days after move-out, with deductions limited to documented damage.",
+        "start": 611,
+        "end": 722
+      },
+      {
+        "category": "LATE_PAYMENT",
+        "quote": "A one-time fee of 2 percent of monthly rent applies after 7 calendar days of grace and does not accrue daily.",
+        "start": 723,
+        "end": 832
+      },
+      {
+        "category": "RENT_INCREASE",
+        "quote": "No rent increase is permitted during the stated term.",
+        "start": 833,
+        "end": 886
+      },
+      {
+        "category": "LANDLORD_TERMINATION",
+        "quote": "The landlord may terminate for cause only, with 45 calendar days of notice.",
+        "start": 887,
+        "end": 962
+      },
+      {
+        "category": "TENANT_LIABILITY",
+        "quote": "Tenant liability is capped at damage caused by the tenant and excludes landlord negligence, structural repairs, and normal wear.",
+        "start": 963,
+        "end": 1091
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-02",
+    "pdf": "contracts/eval-02.pdf",
+    "clauses": [
+      {
+        "category": "AUTO_RENEWAL",
+        "quote": "The agreement automatically renews for 18 months unless notice is delivered 90 calendar days before the contract end date.",
+        "start": 404,
+        "end": 526
+      },
+      {
+        "category": "LATE_PAYMENT",
+        "quote": "A flat one-time late fee of USD 70.00 is payable after a 3-calendar-day grace period, with no daily accrual.",
+        "start": 527,
+        "end": 635
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-03",
+    "pdf": "contracts/eval-03.pdf",
+    "clauses": [
+      {
+        "category": "EARLY_TERMINATION",
+        "quote": "Early termination is prohibited, and a departing tenant owes all remaining rent through the final day of the term.",
+        "start": 391,
+        "end": 505
+      },
+      {
+        "category": "TENANT_LIABILITY",
+        "quote": "The tenant is liable for ordinary wear, but structural repair costs and landlord negligence are excluded and liability is not unlimited.",
+        "start": 506,
+        "end": 642
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-04",
+    "pdf": "contracts/eval-04.pdf",
+    "clauses": [
+      {
+        "category": "SECURITY_DEPOSIT",
+        "quote": "The security deposit is nonrefundable, and deductions may be made at the landlord's unrestricted discretion.",
+        "start": 417,
+        "end": 525
+      },
+      {
+        "category": "AUTO_RENEWAL",
+        "quote": "The rental term does not renew automatically.",
+        "start": 526,
+        "end": 571
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-05",
+    "pdf": "contracts/eval-05.pdf",
+    "clauses": [
+      {
+        "category": "LATE_PAYMENT",
+        "quote": "Late fees accrue daily at 1 percent of monthly rent, starting immediately with zero calendar days of grace.",
+        "start": 386,
+        "end": 493
+      },
+      {
+        "category": "EARLY_TERMINATION",
+        "quote": "Early termination is allowed for a one-time fee of USD 4800.00, with no obligation to pay the remaining rent.",
+        "start": 494,
+        "end": 603
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-06",
+    "pdf": "contracts/eval-06.pdf",
+    "clauses": [
+      {
+        "category": "RENT_INCREASE",
+        "quote": "The landlord may increase rent every 3 months with no maximum percentage or monetary cap. The first increase is effective November 1, 2027.",
+        "start": 379,
+        "end": 518
+      },
+      {
+        "category": "LANDLORD_TERMINATION",
+        "quote": "The landlord may terminate for cause only and must provide 30 calendar days of notice.",
+        "start": 519,
+        "end": 605
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-07",
+    "pdf": "contracts/eval-07.pdf",
+    "clauses": [
+      {
+        "category": "LANDLORD_TERMINATION",
+        "quote": "The landlord may terminate without cause with zero calendar days of notice.",
+        "start": 377,
+        "end": 452
+      },
+      {
+        "category": "SECURITY_DEPOSIT",
+        "quote": "The deposit is refundable within 45 calendar days after actual move-out, with deductions limited to proven tenant damage.",
+        "start": 453,
+        "end": 574
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-08",
+    "pdf": "contracts/eval-08.pdf",
+    "clauses": [
+      {
+        "category": "TENANT_LIABILITY",
+        "quote": "Tenant liability is unlimited and includes losses caused by landlord negligence, structural repairs, and normal wear.",
+        "start": 402,
+        "end": 519
+      },
+      {
+        "category": "RENT_INCREASE",
+        "quote": "Rent may rise by a capped 12 percent once every 12 months, effective October 1, 2028.",
+        "start": 520,
+        "end": 605
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-09",
+    "pdf": "contracts/eval-09.pdf",
+    "clauses": [
+      {
+        "category": "AUTO_RENEWAL",
+        "quote": "The rental renews automatically, but no renewal length or notice period is stated.",
+        "start": 376,
+        "end": 458
+      },
+      {
+        "category": "EARLY_TERMINATION",
+        "quote": "The tenant may terminate early, but any fee and any remaining-rent obligation are unresolved.",
+        "start": 459,
+        "end": 552
+      },
+      {
+        "category": "SECURITY_DEPOSIT",
+        "quote": "The deposit is refundable, although no return timeframe or deduction rules have been agreed.",
+        "start": 553,
+        "end": 645
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-10",
+    "pdf": "contracts/eval-10.pdf",
+    "clauses": [
+      {
+        "category": "LATE_PAYMENT",
+        "quote": "When rent arrives late, a one-time fee of 5 percent of monthly rent applies after 2 calendar days of grace; that fee does not accrue daily.",
+        "start": 393,
+        "end": 532
+      },
+      {
+        "category": "LATE_PAYMENT",
+        "quote": "If rent remains unpaid for more than 20 calendar days, an additional late fee of USD 10.00 accrues daily until payment.",
+        "start": 533,
+        "end": 652
+      },
+      {
+        "category": "TENANT_LIABILITY",
+        "quote": "The tenant must pay for structural repairs, even when the tenant did not cause the damage.",
+        "start": 653,
+        "end": 743
+      },
+      {
+        "category": "TENANT_LIABILITY",
+        "quote": "The tenant bears losses arising from landlord negligence; no overall liability cap is stated.",
+        "start": 744,
+        "end": 837
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-11",
+    "pdf": "contracts/eval-11.pdf",
+    "clauses": [
+      {
+        "category": "AUTO_RENEWAL",
+        "quote": "The lease automatically renews for 6 months unless the tenant gives notice 40 business days before the contract end date.",
+        "start": 404,
+        "end": 525
+      },
+      {
+        "category": "SECURITY_DEPOSIT",
+        "quote": "The deposit is refundable within 35 business days after move-out, with deductions limited to itemized tenant damage.",
+        "start": 526,
+        "end": 642
+      },
+      {
+        "category": "LANDLORD_TERMINATION",
+        "quote": "The landlord may terminate for cause on 5 business days of notice.",
+        "start": 643,
+        "end": 709
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-12",
+    "pdf": "contracts/eval-12.pdf",
+    "clauses": [
+      {
+        "category": "AUTO_RENEWAL",
+        "quote": "This residential lease automatically renews for 12 months unless notice is given 61 calendar days before the contract end date.",
+        "start": 564,
+        "end": 691
+      },
+      {
+        "category": "EARLY_TERMINATION",
+        "quote": "Early termination is allowed on payment of two months' rent, and no remaining rent is due.",
+        "start": 692,
+        "end": 782
+      },
+      {
+        "category": "LATE_PAYMENT",
+        "quote": "A one-time fee of 10 percent of monthly rent applies after 1 calendar day of grace; the fee does not accrue daily.",
+        "start": 783,
+        "end": 897
+      }
+    ],
+    "language": "english"
+  },
+  {
+    "id": "eval-13",
+    "pdf": "contracts/eval-13.pdf",
+    "clauses": [
+      {
+        "category": "AUTO_RENEWAL",
+        "quote": "Der Vertrag verl\u00e4ngert sich automatisch um zw\u00f6lf Monate, sofern der Mieter nicht 61 Kalendertage vor Vertragsende k\u00fcndigt.",
+        "start": 395,
+        "end": 517
+      },
+      {
+        "category": "SECURITY_DEPOSIT",
+        "quote": "Die Kaution ist r\u00fcckzahlbar. Sie wird innerhalb von 31 Kalendertagen nach R\u00fcckgabe ausgezahlt; Abz\u00fcge sind nur f\u00fcr nachgewiesene Sch\u00e4den zul\u00e4ssig.",
+        "start": 518,
+        "end": 664
+      }
+    ],
+    "language": "german",
+    "ai_findings": [
+      {
+        "title": "Weekly bedroom inspections",
+        "quote": "Der Vermieter darf jeden Sonntag ohne Vorank\u00fcndigung das Schlafzimmer betreten und fotografieren.",
+        "model_score": 4,
+        "category": "ADDITIONAL",
+        "start": 665,
+        "end": 762
+      }
+    ]
+  },
+  {
+    "id": "eval-14",
+    "pdf": "contracts/eval-14.pdf",
+    "clauses": [
+      {
+        "category": "EARLY_TERMINATION",
+        "quote": "Eine vorzeitige K\u00fcndigung ist erlaubt, kostet jedoch das Dreifache der monatlichen Miete.",
+        "start": 397,
+        "end": 486
+      },
+      {
+        "category": "LATE_PAYMENT",
+        "quote": "Bei versp\u00e4teter Zahlung f\u00e4llt nach f\u00fcnf Kalendertagen eine einmalige Geb\u00fchr von 5 Prozent der Monatsmiete an.",
+        "start": 487,
+        "end": 596
+      }
+    ],
+    "language": "german",
+    "ai_findings": [
+      {
+        "title": "Unspecified management charge",
+        "quote": "Zus\u00e4tzlich zur Miete muss der Mieter jede vom Vermieter festgesetzte Verwaltungsgeb\u00fchr ohne Obergrenze bezahlen.",
+        "model_score": 5,
+        "category": "ADDITIONAL",
+        "start": 597,
+        "end": 709
+      }
+    ]
+  },
+  {
+    "id": "eval-15",
+    "pdf": "contracts/eval-15.pdf",
+    "clauses": [
+      {
+        "category": "RENT_INCREASE",
+        "quote": "Die Miete darf alle sechs Monate um 8 Prozent erh\u00f6ht werden. Die erste Erh\u00f6hung gilt ab dem 01.08.2027.",
+        "start": 397,
+        "end": 500
+      },
+      {
+        "category": "LANDLORD_TERMINATION",
+        "quote": "Der Vermieter darf ohne Angabe eines Grundes mit einer Frist von 6 Kalendertagen k\u00fcndigen.",
+        "start": 501,
+        "end": 591
+      }
+    ],
+    "language": "german",
+    "ai_findings": [
+      {
+        "title": "Required personal data disclosure",
+        "quote": "Der Mieter muss vollst\u00e4ndige Kontoausz\u00fcge aller privaten Konten monatlich an den Vermieter \u00fcbermitteln.",
+        "model_score": 4,
+        "category": "ADDITIONAL",
+        "start": 592,
+        "end": 695
+      }
+    ]
+  },
+  {
+    "id": "eval-16",
+    "pdf": "contracts/eval-16.pdf",
+    "clauses": [
+      {
+        "category": "TENANT_LIABILITY",
+        "quote": "Der Mieter haftet unbegrenzt, auch f\u00fcr Fahrl\u00e4ssigkeit des Vermieters und f\u00fcr die Erneuerung tragender W\u00e4nde.",
+        "start": 476,
+        "end": 584
+      },
+      {
+        "category": "AUTO_RENEWAL",
+        "quote": "Eine automatische Verl\u00e4ngerung findet nicht statt.",
+        "start": 585,
+        "end": 635
+      }
+    ],
+    "language": "german",
+    "ai_findings": [
+      {
+        "title": "Compulsory furniture purchase",
+        "quote": "Beim Einzug muss der Mieter die gebrauchten M\u00f6bel des Vermieters f\u00fcr 8.000,00 EUR kaufen.",
+        "model_score": 4,
+        "category": "ADDITIONAL",
+        "start": 636,
+        "end": 725
+      }
+    ]
+  },
+  {
+    "id": "eval-17",
+    "pdf": "contracts/eval-17.pdf",
+    "clauses": [
+      {
+        "category": "LATE_PAYMENT",
+        "quote": "Es gibt sieben Gesch\u00e4ftstage Zahlungsaufschub und keine Verzugsgeb\u00fchr.",
+        "start": 391,
+        "end": 461
+      },
+      {
+        "category": "SECURITY_DEPOSIT",
+        "quote": "Die r\u00fcckzahlbare Kaution wird sp\u00e4testens 20 Gesch\u00e4ftstage nach R\u00fcckgabe erstattet; nur belegte Sch\u00e4den d\u00fcrfen abgezogen werden.",
+        "start": 462,
+        "end": 589
+      },
+      {
+        "category": "TENANT_LIABILITY",
+        "quote": "Normale Abnutzung ist von der Haftung ausgeschlossen. Der Mieter haftet nicht f\u00fcr strukturelle Reparaturen oder Fahrl\u00e4ssigkeit des Vermieters; eine unbegrenzte Haftung besteht nicht.",
+        "start": 590,
+        "end": 772
+      }
+    ],
+    "language": "german",
+    "ai_findings": []
+  },
+  {
+    "id": "eval-18",
+    "pdf": "contracts/eval-18.pdf",
+    "clauses": [
+      {
+        "category": "EARLY_TERMINATION",
+        "quote": "Die vorzeitige K\u00fcndigung ist erlaubt und kostenlos; verbleibende Miete wird nicht f\u00e4llig.",
+        "start": 597,
+        "end": 686
+      },
+      {
+        "category": "TENANT_LIABILITY",
+        "quote": "Normale Abnutzung ist ausgeschlossen, und der Mieter haftet nur bis 500,00 EUR f\u00fcr selbst verursachte Sch\u00e4den.",
+        "start": 687,
+        "end": 797
+      }
+    ],
+    "language": "german",
+    "ai_findings": [
+      {
+        "title": "Required weekly unpaid work",
+        "quote": "Der Mieter muss jede Woche acht Stunden unbezahlt den privaten Garten des Vermieters au\u00dferhalb des Mietobjekts pflegen.",
+        "model_score": 4,
+        "category": "ADDITIONAL",
+        "start": 798,
+        "end": 917
+      }
+    ]
+  },
+  {
+    "id": "eval-19",
+    "pdf": "contracts/eval-19.pdf",
+    "clauses": [
+      {
+        "category": "AUTO_RENEWAL",
+        "quote": "The lease does not renew automatically.",
+        "start": 384,
+        "end": 423
+      },
+      {
+        "category": "RENT_INCREASE",
+        "quote": "Rent increases are not allowed during the term.",
+        "start": 424,
+        "end": 471
+      }
+    ],
+    "language": "english",
+    "ai_findings": [
+      {
+        "title": "Mandatory private transport",
+        "quote": "The tenant must drive the landlord to work every weekday at the tenant's own expense.",
+        "model_score": 4,
+        "category": "ADDITIONAL",
+        "start": 472,
+        "end": 557
+      },
+      {
+        "title": "Compulsory equipment purchase",
+        "quote": "The tenant must buy the landlord's cleaning equipment for GBP 250.00 at move-in.",
+        "model_score": 2,
+        "category": "ADDITIONAL",
+        "start": 558,
+        "end": 638
+      }
+    ]
+  },
+  {
+    "id": "eval-20",
+    "pdf": "contracts/eval-20.pdf",
+    "clauses": [
+      {
+        "category": "TENANT_LIABILITY",
+        "quote": "The tenant must pay all structural repair costs without a limit and must fund the landlord's unrelated business losses without a limit.",
+        "start": 366,
+        "end": 501
+      },
+      {
+        "category": "LANDLORD_TERMINATION",
+        "quote": "The landlord cannot terminate without cause and must give 30 calendar days of notice.",
+        "start": 502,
+        "end": 587
+      }
+    ],
+    "language": "english",
+    "ai_findings": [
+      {
+        "title": "Unrelated business losses",
+        "quote": "The tenant must pay all structural repair costs without a limit and must fund the landlord's unrelated business losses without a limit.",
+        "model_score": 5,
+        "category": "ADDITIONAL",
+        "start": 366,
+        "end": 501
+      },
+      {
+        "title": "Unspecified membership dues",
+        "quote": "The tenant must join an external club and pay whatever dues the club later sets.",
+        "model_score": 3,
+        "category": "ADDITIONAL",
+        "start": 588,
+        "end": 668
+      }
+    ]
+  },
+  {
+    "id": "eval-21",
+    "pdf": "contracts/eval-21.pdf",
+    "clauses": [
+      {
+        "category": "EARLY_TERMINATION",
+        "quote": "Early termination is allowed with no fee and no remaining rent due.",
+        "start": 601,
+        "end": 668
+      },
+      {
+        "category": "LATE_PAYMENT",
+        "quote": "There is a seven-calendar-day grace period, no late fee, and no daily accrual.",
+        "start": 669,
+        "end": 747
+      },
+      {
+        "category": "TENANT_LIABILITY",
+        "quote": "Normal wear, structural repairs and landlord negligence are excluded, and liability is capped at USD 500.00.",
+        "start": 748,
+        "end": 856
+      }
+    ],
+    "language": "english",
+    "ai_findings": []
+  }
+]

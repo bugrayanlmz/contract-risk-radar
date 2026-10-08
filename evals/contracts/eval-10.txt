@@ -1,0 +1,9 @@
+Fictional landlord Reese rents a home to fictional tenant Jules. Monthly rent is USD 1300.00. The lease begins December 1, 2027 and ends November 30, 2028.
+
+When rent arrives late, a one-time fee of 5 percent of monthly rent applies after 2 calendar days of grace; that fee does not accrue daily.
+
+If rent remains unpaid for more than 20 calendar days, an additional late fee of USD 10.00 accrues daily until payment.
+
+The tenant must pay for structural repairs, even when the tenant did not cause the damage.
+
+The tenant bears losses arising from landlord negligence; no overall liability cap is stated.

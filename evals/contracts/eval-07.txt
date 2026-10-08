@@ -1,0 +1,5 @@
+Fictional landlord Finley leases a home to fictional tenant Arden for September 1, 2027 through August 31, 2028. Monthly rent is GBP 1100.00.
+
+The landlord may terminate without cause with zero calendar days of notice.
+
+The deposit is refundable within 45 calendar days after actual move-out, with deductions limited to proven tenant damage.

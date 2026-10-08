@@ -1,0 +1,5 @@
+Fictional parties Noel and Ash agree to rent a home. The term runs from March 1, 2027 to February 29, 2028. Monthly rent is USD 1400.00. The deposit is USD 1400.00.
+
+The agreement automatically renews for 18 months unless notice is delivered 90 calendar days before the contract end date.
+
+A flat one-time late fee of USD 70.00 is payable after a 3-calendar-day grace period, with no daily accrual.

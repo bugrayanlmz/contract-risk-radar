@@ -1,0 +1,15 @@
+The fictional tenant Ellis rents a dwelling from fictional landlord Sky. The lease starts on February 1, 2027 and ends on January 31, 2028. Monthly rent is USD 1200.00 and the security deposit is USD 1200.00.
+
+Renewal is not automatic; a signed written extension is required.
+
+Early termination is allowed with a fee of half a month's rent; unused future rent is not payable.
+
+The deposit is refundable within 10 calendar days after move-out, with deductions limited to documented damage.
+
+A one-time fee of 2 percent of monthly rent applies after 7 calendar days of grace and does not accrue daily.
+
+No rent increase is permitted during the stated term.
+
+The landlord may terminate for cause only, with 45 calendar days of notice.
+
+Tenant liability is capped at damage caused by the tenant and excludes landlord negligence, structural repairs, and normal wear.

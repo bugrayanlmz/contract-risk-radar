@@ -1,0 +1,7 @@
+Fictional landlord Sam and tenant Lee agree to rent a dwelling from January 15, 2028 to January 14, 2029. Monthly rent is USD 1250.00 and the deposit is USD 1500.00.
+
+The lease automatically renews for 6 months unless the tenant gives notice 40 business days before the contract end date.
+
+The deposit is refundable within 35 business days after move-out, with deductions limited to itemized tenant damage.
+
+The landlord may terminate for cause on 5 business days of notice.

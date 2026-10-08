@@ -1,0 +1,5 @@
+Fictional tenant Marlow rents a residence from fictional landlord Perry. Rent is USD 1750.00 per month. The lease starts October 1, 2027 and ends September 30, 2028.
+
+Tenant liability is unlimited and includes losses caused by landlord negligence, structural repairs, and normal wear.
+
+Rent may rise by a capped 12 percent once every 12 months, effective October 1, 2028.

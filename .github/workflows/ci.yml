@@ -1,0 +1,57 @@
+name: Checks
+on: [push, pull_request]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-bookworm
+        env:
+          POSTGRES_USER: radar
+          POSTGRES_PASSWORD: radar
+          POSTGRES_DB: radar_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U radar -d radar_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://radar:radar@localhost:5432/radar_test
+      TEST_DATABASE_URL: postgresql+psycopg://radar:radar@localhost:5432/radar_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.8.22"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: uv sync --project backend --frozen
+      - run: uv run --project backend ruff check backend/app backend/tests backend/scripts evals scripts
+      - run: uv run python -m scripts.migrate
+        working-directory: backend
+      - run: uv run alembic check
+        working-directory: backend
+      - run: uv run pytest -q
+        working-directory: backend
+      - run: PYTHONPATH=backend uv run --project backend python -m evals.run --validate
+      - run: uv run python -m scripts.export_openapi
+        working-directory: backend
+      - run: npm ci
+        working-directory: frontend
+      - run: npm run generate
+        working-directory: frontend
+      - run: git diff --exit-code -- backend/openapi.json frontend/src/api/generated
+      - run: npm run build && npm test
+        working-directory: frontend
+      - run: npx playwright install --with-deps chromium
+        working-directory: frontend
+      - run: npm run test:e2e
+        working-directory: frontend
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: browser-test-results
+          path: frontend/test-results

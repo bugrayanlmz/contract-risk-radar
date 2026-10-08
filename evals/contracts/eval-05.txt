@@ -1,0 +1,5 @@
+Fictional landlord River rents a residence to fictional tenant Sage. Monthly rent is USD 1600.00. The lease begins July 1, 2027 and ends June 30, 2028.
+
+Late fees accrue daily at 1 percent of monthly rent, starting immediately with zero calendar days of grace.
+
+Early termination is allowed for a one-time fee of USD 4800.00, with no obligation to pay the remaining rent.
